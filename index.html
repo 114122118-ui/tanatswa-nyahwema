@@ -1,1025 +1,210 @@
-<!-- Design System -->
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI Portfolio - Home</title>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<!-- Tailwind Config (external) -->
-    <script src="script.js"></script>
-    <!-- Tailwind CSS -->
+﻿<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..50&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="bg-surface/80 dark:bg-surface/80 backdrop-blur-xl sticky top-0 w-full z-50 border-b border-white/10 shadow-sm">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
-<!-- Brand -->
-<div class="font-headline-md text-headline-md font-bold text-on-surface hover:opacity-80 transition-opacity cursor-pointer">
-                AI Portfolio
-            </div>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex gap-gutter items-center font-label-md text-label-md">
-<a class="text-primary border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity" href="#">Home</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 transition-opacity" href="#">AI Lab</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 transition-opacity" href="#">Taiwan Life</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 transition-opacity" href="#">Contact</a>
-</nav>
-<!-- Actions -->
-<div class="flex items-center gap-unit">
-<button class="text-primary hover:opacity-80 transition-opacity p-unit rounded-full hover:bg-surface-variant transition-colors group flex items-center justify-center">
-<span class="material-symbols-outlined text-[24px] group-hover:scale-95 transition-transform duration-200" data-icon="dark_mode">dark_mode</span>
-</button>
-</div>
-</div>
-</header>
-<main class="flex-grow">
-<!-- Hero Section with Canvas Background -->
-<section class="relative w-full min-h-[80vh] flex items-center pt-stack-lg pb-stack-lg overflow-hidden">
-<!-- Interactive Node Background -->
-<canvas class="absolute inset-0 w-full h-full z-0 opacity-40" id="networkCanvas"></canvas>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full flex flex-col items-start gap-stack-md">
-<div class="inline-flex items-center gap-unit px-unit py-[4px] rounded-full bg-secondary-container/20 border border-secondary-container/30">
-<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
-<span class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">Tzu Chi University • TCU</span>
-</div>
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface max-w-3xl leading-tight">
-                    Bridging Borders<br/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">through AI.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    From the vibrant landscapes of Zimbabwe to the technological hub of Taiwan. I am an AI researcher and International Services student, dedicated to building intelligent agents that transcend cultural and linguistic boundaries.
-                </p>
-<div class="flex flex-wrap gap-gutter pt-stack-sm">
-<button class="bg-primary text-on-primary font-label-md text-label-md px-gutter py-[12px] rounded-lg ambient-glow hover:bg-surface-tint transition-all active:scale-95 duration-200">
-                        View Projects
-                    </button>
-<button class="bg-transparent border-[1.5px] border-primary text-primary font-label-md text-label-md px-gutter py-[12px] rounded-lg hover:bg-primary/10 transition-all active:scale-95 duration-200">
-                        Read My Story
-                    </button>
-</div>
-</div>
-</section>
-<!-- Featured Projects Teaser (Bento Grid) -->
-<section class="w-full py-stack-lg bg-surface-container-low relative">
-<!-- Subtle background accent -->
-<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-primary/5 to-transparent pointer-events-none"></div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-<div class="flex justify-between items-end mb-stack-md">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Work</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-unit">Exploring the intersection of LLMs and cultural context.</p>
-</div>
-<a class="hidden md:inline-flex items-center gap-unit text-primary font-label-md text-label-md hover:underline decoration-primary transition-all" href="#">
-                        All Projects <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Featured Large Card -->
-<div class="md:col-span-8 glass-panel rounded-xl overflow-hidden group cursor-pointer relative h-[400px]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed, sophisticated data visualization dashboard displaying glowing AI network nodes on a dark background. The interface features minimalist geometric shapes in deep blacks, pristine whites, and vibrant purple and cyan accents, reflecting a high-end tech portfolio aesthetic. Soft ambient lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnbLP0BZ2O_G3RXWNF8Y02QEbL8OgoYLiG4Hn2NUO4Usd0qc7RZ3ze37MQ4jCdw6IKdOa-DR0aV254tJeTwhxLDR1Ra8XAaGGNCVzsTHpQU9xeFFy4H6ryKJiOttI9RBz1dj9WrJ94mbOA67pmQKszaBf8wvMsGe2_DSdopGFx9-WQgEeGOjP7ofwVHBclYOLJjn3jZJYZQd7cLwsgU2hhEWwizXY0f1_PI6NNgnLSMEFa6uKvy4OquQ')">
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-stack-md w-full">
-<div class="flex gap-unit mb-stack-sm">
-<span class="bg-primary-container/20 text-primary-fixed-dim px-unit py-[4px] rounded-full font-code text-code text-[12px]">Python</span>
-<span class="bg-primary-container/20 text-primary-fixed-dim px-unit py-[4px] rounded-full font-code text-code text-[12px]">PyTorch</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Cross-Lingual Sentiment Agent</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-unit line-clamp-2">An LLM-based architecture designed to accurately interpret nuanced sentiment in Shona and Mandarin, bridging language gaps.</p>
-</div>
-</div>
-<!-- Secondary Card 1 -->
-<div class="md:col-span-4 glass-panel rounded-xl overflow-hidden group cursor-pointer relative h-[400px]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract digital art representation of natural language processing. Flowing, ethereal text particles morphing into structured geometric forms in a dark, minimalist space. Illuminated by high-key cyan and magenta accents against a deep void background. Serene yet technologically advanced mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRs0Xriz_fVP06X-5p-SsXLMyEEdVdC8lHsIcaQJC43z3mUdvwhJy1KdiZds05e1UB3TAQGMO25Zfoih6w5m7YBbLsOgVk9RK4zxvG7yjucpLa8EGG_5evyVIHBpsNNGN3ffgT6WUp_jhBX8HjW3yY_K7GrUMPQaY7jJ6WyUibAVSBR8FFR438zBL-8p0ua3yXzTnXXBg02fh82NVsryJPNXbvJ9byZnA3GX_iOVvcCq9aOoDufPSAOQ')">
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-gutter w-full">
-<h3 class="font-headline-md text-headline-md text-on-surface text-[20px] group-hover:text-secondary-container transition-colors">Neural Translation Core</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-unit text-[14px]">Optimizing transformer models for low-resource languages.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Taiwan Lifestyle Preview -->
-<section class="w-full py-stack-lg bg-surface">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="flex flex-col md:flex-row gap-stack-lg items-center">
-<div class="w-full md:w-1/2 order-2 md:order-1">
-<div class="glass-panel rounded-xl overflow-hidden relative aspect-square md:aspect-auto md:h-[500px]">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="A striking cinematic photograph capturing the contrast of Taiwan at night. In the foreground, traditional glowing red paper lanterns are softly blurred, while the background reveals ultra-modern, neon-lit skyscrapers in deep cyber-blues and purples. A moody, rain-slicked street reflects the vibrant lights, blending tradition with advanced technology." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVDfLJmQu8SryKy29KOiwTyreJJF1qvgdRZeAQg1trFJB3HjjXEcfWKjZ8goLVYHVgoIlXFD6LuaqlhcVtWNiaDdyN-Msqo3W62lh5B6rP-zrcIaFTp-wtJ3II7qx8LBNxxi5NrhC3kR9nq31D3tpCvdMzmUUeqofwBMEq3PjsifpOctXTqVccmtY6UhTd-aSWjm20Id4OXbb8iSW84ujA7wkn02RC2GgXjPp-5LVOGuNSweFzkNc51w')">
-</div>
-<!-- subtle inner shadow/glow -->
-<div class="absolute inset-0 border border-white/10 rounded-xl pointer-events-none"></div>
-</div>
-</div>
-<div class="w-full md:w-1/2 order-1 md:order-2 flex flex-col gap-stack-sm">
-<span class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-wider">Life in Hualien</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">A Cultural Synthesis</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                            Studying International Services at TCU isn't just about academia; it's about cultural immersion. Navigating life in Taiwan has fundamentally shaped my approach to technology—teaching me that empathy and context are just as important as algorithms.
-                        </p>
-<p class="font-body-md text-body-md text-on-surface-variant mt-unit">
-                            From the bustling night markets to the serene mountains of Hualien, every interaction informs my perspective on how AI can serve diverse global communities.
-                        </p>
-<div class="mt-gutter">
-<button class="bg-transparent text-on-surface font-label-md text-label-md hover:text-primary hover:underline decoration-primary transition-all flex items-center gap-unit">
-                                Explore Journal <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low dark:bg-surface-container-low w-full py-stack-lg border-t border-white/5">
-<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
-<!-- Brand / Copyright -->
-<div class="flex flex-col items-center md:items-start gap-unit">
-<div class="font-headline-md text-headline-md font-bold text-on-surface hover:underline decoration-primary transition-all duration-300">
-                    AI Portfolio
-                </div>
-<p class="font-body-md text-body-md text-primary">
-                    © 2024 AI Portfolio. From Zimbabwe to Taiwan.
-                </p>
-</div>
-<!-- Links -->
-<nav class="flex gap-gutter font-body-md text-body-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary transition-all duration-300" href="#">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary transition-all duration-300" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary transition-all duration-300" href="#">ResearchGate</a>
-</nav>
-</div>
-</footer>
-</script><!-- Interactive Node Script moved to script.js -->
-</body></html>
-
-<!-- Home - AI Portfolio -->
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI Lab - AI Portfolio</title>
-<!-- Google Fonts & Material Symbols -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Theme Config -->
-<script id="tailwind-config">
+    <script>
       tailwind.config = {
-        darkMode: "class",
+        darkMode: 'class',
         theme: {
           extend: {
-            "colors": {
-                    "secondary-container": "#03b5d3",
-                    "on-error": "#690005",
-                    "inverse-primary": "#732ee4",
-                    "on-tertiary": "#620040",
-                    "secondary-fixed-dim": "#4cd7f6",
-                    "on-background": "#dae2fd",
-                    "primary": "#d2bbff",
-                    "inverse-on-surface": "#283044",
-                    "outline": "#958da1",
-                    "tertiary-container": "#ae397b",
-                    "tertiary": "#ffafd3",
-                    "primary-fixed-dim": "#d2bbff",
-                    "tertiary-fixed": "#ffd8e7",
-                    "outline-variant": "#4a4455",
-                    "surface-tint": "#d2bbff",
-                    "on-secondary-fixed": "#001f26",
-                    "surface-bright": "#31394d",
-                    "secondary-fixed": "#acedff",
-                    "on-primary": "#3f008e",
-                    "error": "#ffb4ab",
-                    "on-primary-fixed": "#25005a",
-                    "on-tertiary-fixed-variant": "#85145a",
-                    "on-primary-container": "#ede0ff",
-                    "on-primary-fixed-variant": "#5a00c6",
-                    "surface-container-low": "#131b2e",
-                    "on-secondary": "#003640",
-                    "surface-container-high": "#222a3d",
-                    "inverse-surface": "#dae2fd",
-                    "error-container": "#93000a",
-                    "primary-container": "#7c3aed",
-                    "surface-dim": "#0b1326",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-highest": "#2d3449",
-                    "tertiary-fixed-dim": "#ffafd3",
-                    "surface": "#0b1326",
-                    "primary-fixed": "#eaddff",
-                    "surface-container-lowest": "#060e20",
-                    "on-surface-variant": "#ccc3d8",
-                    "surface-container": "#171f33",
-                    "on-secondary-fixed-variant": "#004e5c",
-                    "secondary": "#4cd7f6",
-                    "on-secondary-container": "#00424e",
-                    "on-surface": "#dae2fd",
-                    "on-tertiary-container": "#ffdce9",
-                    "surface-variant": "#2d3449",
-                    "background": "#0b1326",
-                    "on-tertiary-fixed": "#3d0026"
+            colors: {
+              primary: '#d2bbff',
+              secondary: '#4cd7f6',
+              background: '#0b1326',
+              surface: '#0b1326',
+              'surface-container-low': '#131b2e',
+              'on-surface': '#dae2fd',
+              'on-surface-variant': '#ccc3d8',
+              'on-primary': '#3f008e'
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            spacing: {
+              'margin-mobile': '20px',
+              'margin-desktop': '64px',
+              'container-max': '1280px',
+              gutter: '24px',
+              unit: '8px',
+              'stack-sm': '12px',
+              'stack-md': '32px',
+              'stack-lg': '80px'
             },
-            "spacing": {
-                    "stack-lg": "80px",
-                    "margin-desktop": "64px",
-                    "stack-md": "32px",
-                    "gutter": "24px",
-                    "stack-sm": "12px",
-                    "margin-mobile": "20px",
-                    "unit": "8px",
-                    "container-max": "1280px"
+            fontFamily: {
+              body: ['Inter', 'sans-serif'],
+              headline: ['Montserrat', 'sans-serif']
             },
-            "fontFamily": {
-                    "display-lg-mobile": ["Montserrat"],
-                    "label-md": ["Inter"],
-                    "body-md": ["Inter"],
-                    "headline-lg": ["Montserrat"],
-                    "display-lg": ["Montserrat"],
-                    "body-lg": ["Inter"],
-                    "code": ["Inter"], // using Inter as per config, but styling as monospaced in custom css if needed
-                    "headline-md": ["Montserrat"]
-            },
-            "fontSize": {
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800"}],
-                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "code": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}], // Treat as code
-                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            fontSize: {
+              'display-lg': ['64px', { lineHeight: '1.05', letterSpacing: '-0.02em', fontWeight: '800' }],
+              'display-lg-mobile': ['40px', { lineHeight: '1.1', letterSpacing: '-0.01em', fontWeight: '800' }],
+              'headline-lg': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
+              'headline-md': ['24px', { lineHeight: '1.4', fontWeight: '600' }],
+              'body-lg': ['18px', { lineHeight: '1.7', fontWeight: '400' }],
+              'body-md': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+              'label-md': ['14px', { lineHeight: '1.2', letterSpacing: '0.05em', fontWeight: '600' }]
             }
           }
         }
       }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .icon-filled {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        
-        /* Glassmorphism & Depth Utils */
-        .glass-panel {
-            background: rgba(45, 52, 73, 0.4); /* surface-variant base */
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .ambient-glow {
-            box-shadow: 0 0 20px 0 rgba(210, 187, 255, 0.2); /* primary color glow */
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            border-color: rgba(210, 187, 255, 0.3); /* primary color */
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5), 0 0 20px 0 rgba(210, 187, 255, 0.15);
-        }
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-background text-on-surface min-h-screen flex flex-col overflow-x-hidden font-body">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-surface/80 backdrop-blur-xl">
+      <div class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
+        <a href="#home" class="font-headline text-headline-md font-bold text-on-surface transition-opacity hover:opacity-80">AI Portfolio</a>
 
-        /* Monospace font fallback for code elements since config maps 'code' to Inter */
-        .font-code-mono {
-            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-        }
+        <nav class="hidden items-center gap-gutter md:flex" aria-label="Main navigation">
+          <a class="border-b-2 border-primary pb-1 text-primary" href="#home">Home</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="#projects">AI Lab</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="#life">Taiwan Life</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="#contact">Contact</a>
+        </nav>
 
-        /* Shimmer effect */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        .animate-shimmer {
-            background: linear-gradient(to right, rgba(210,187,255,0.1) 4%, rgba(76,215,246,0.2) 25%, rgba(210,187,255,0.1) 36%);
-            background-size: 1000px 100%;
-            animation: shimmer 3s infinite linear;
-        }
-    </style>
-</head>
-<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<nav class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
-<!-- Brand -->
-<a class="font-headline-md text-headline-md font-bold text-on-surface hover:opacity-80 transition-opacity" href="#">
-                AI Portfolio
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="flex h-10 w-10 items-center justify-center rounded-full text-primary transition-colors hover:bg-white/5" aria-label="Toggle theme">
+            <span class="material-symbols-outlined text-2xl">dark_mode</span>
+          </button>
+          <button class="nav-toggle flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-on-surface md:hidden" aria-label="Open menu" aria-expanded="false">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobileMenu" class="mobile-menu hidden border-t border-white/10 bg-surface/95 md:hidden" aria-label="Mobile navigation">
+        <div class="mx-auto flex max-w-container-max flex-col gap-4 px-margin-mobile py-4">
+          <a href="#home" class="text-on-surface">Home</a>
+          <a href="#projects" class="text-on-surface">AI Lab</a>
+          <a href="#life" class="text-on-surface">Taiwan Life</a>
+          <a href="#contact" class="text-on-surface">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <section id="home" class="relative overflow-hidden">
+        <canvas id="networkCanvas" class="absolute inset-0 z-0 h-full w-full opacity-40"></canvas>
+        <div class="relative z-10 mx-auto flex min-h-[78vh] max-w-container-max flex-col items-start justify-center gap-stack-md px-margin-mobile pb-stack-lg pt-stack-lg md:px-margin-desktop">
+          <div class="inline-flex items-center gap-unit rounded-full border border-secondary/30 bg-secondary/10 px-unit py-[4px]">
+            <span class="h-2 w-2 animate-pulse rounded-full bg-secondary"></span>
+            <span class="font-label-md text-label-md uppercase tracking-[0.12em] text-secondary">Tzu Chi University • TCU</span>
+          </div>
+
+          <h1 class="max-w-3xl text-display-lg-mobile font-headline text-on-surface md:text-display-lg">
+            Bridging Borders<br />
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">through AI.</span>
+          </h1>
+
+          <p class="max-w-2xl text-body-lg text-on-surface-variant">
+            From the vibrant landscapes of Zimbabwe to the technological hub of Taiwan, I build AI systems that connect people, languages, and cultures across borders.
+          </p>
+
+          <div class="flex flex-col gap-gutter pt-stack-sm sm:flex-row">
+            <a href="#projects" class="rounded-lg bg-primary px-gutter py-[12px] text-center font-label-md text-label-md text-on-primary transition-transform hover:scale-[1.02]">View Projects</a>
+            <a href="#life" class="rounded-lg border border-primary px-gutter py-[12px] text-center font-label-md text-label-md text-primary transition-colors hover:bg-primary/10">Read My Story</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="bg-surface-container-low py-stack-lg">
+        <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
+          <div class="mb-stack-md flex items-end justify-between gap-4">
+            <div>
+              <h2 class="font-headline text-headline-lg text-on-surface">Featured Work</h2>
+              <p class="mt-unit text-body-md text-on-surface-variant">Exploring the intersection of LLMs and cultural context.</p>
+            </div>
+            <a class="hidden items-center gap-unit text-primary md:inline-flex" href="#contact">
+              All Projects
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
             </a>
-<!-- Navigation Links (Desktop) -->
-<div class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80" href="#">Home</a>
-<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity Active: scale-95 transition-transform duration-200" href="#">AI Lab</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80" href="#">Taiwan Life</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80" href="#">Contact</a>
-</div>
-<!-- Trailing Actions -->
-<div class="flex items-center gap-4">
-<button aria-label="Toggle Dark Mode" class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80">
-<span class="material-symbols-outlined text-headline-md">dark_mode</span>
-</button>
-<!-- Mobile Menu Toggle -->
-<button aria-label="Open Menu" class="md:hidden text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-headline-md">menu</span>
-</button>
-</div>
-</div>
-</nav>
-<!-- Main Content Canvas -->
-<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col gap-stack-lg relative">
-<!-- Ambient background elements -->
-<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary-container/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-<!-- Header Section -->
-<header class="flex flex-col gap-stack-sm mt-stack-md">
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface max-w-3xl">
-                AI Lab <span class="text-primary">Research &amp; Projects</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                A repository of applied artificial intelligence research, focusing on custom model fine-tuning, autonomous agents, and robust infrastructure design. Blending theoretical concepts with production-ready execution.
+          </div>
+
+          <div class="grid grid-cols-1 gap-gutter md:grid-cols-12">
+            <article class="glass-panel group relative h-[360px] overflow-hidden rounded-xl md:col-span-8">
+              <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-gutter">
+                <div class="mb-stack-sm flex flex-wrap gap-unit">
+                  <span class="rounded-full bg-primary/15 px-unit py-[4px] text-[12px] text-primary">Python</span>
+                  <span class="rounded-full bg-primary/15 px-unit py-[4px] text-[12px] text-primary">PyTorch</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-on-surface group-hover:text-primary">Cross-Lingual Sentiment Agent</h3>
+                <p class="mt-unit text-body-md text-on-surface-variant">An LLM-based architecture designed to interpret nuanced sentiment in Shona and Mandarin.</p>
+              </div>
+            </article>
+
+            <article class="glass-panel group relative h-[360px] overflow-hidden rounded-xl md:col-span-4">
+              <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-gutter">
+                <h3 class="font-headline text-headline-md text-on-surface">Neural Translation Core</h3>
+                <p class="mt-unit text-body-md text-on-surface-variant">Optimizing transformer models for low-resource languages.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="life" class="bg-surface py-stack-lg">
+        <div class="mx-auto grid max-w-container-max gap-stack-lg px-margin-mobile md:grid-cols-2 md:items-center md:px-margin-desktop">
+          <div class="order-2 md:order-1">
+            <div class="glass-panel relative aspect-square overflow-hidden rounded-xl md:h-[500px] md:aspect-auto">
+              <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1505761671935-60a5f2e17b3d?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="absolute inset-0 border border-white/10"></div>
+            </div>
+          </div>
+
+          <div class="order-1 flex flex-col gap-stack-sm md:order-2">
+            <span class="font-label-md text-label-md uppercase tracking-[0.12em] text-secondary">Life in Hualien</span>
+            <h2 class="font-headline text-headline-lg text-on-surface">A Cultural Synthesis</h2>
+            <p class="text-body-lg text-on-surface-variant">
+              Studying International Services at TCU is not only about academics. It is about learning how culture, empathy, and technology shape the way people live and work together.
             </p>
-</header>
-<!-- Main Projects Grid (Bento style) -->
-<section aria-label="Completed Projects">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter auto-rows-[minmax(320px,auto)]">
-<!-- Project 1: Custom LLM via LoRA (Featured / Spans 2 cols on wide screens) -->
-<article class="glass-panel rounded-xl p-8 flex flex-col gap-6 md:col-span-2 card-hover relative overflow-hidden group">
-<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent z-0"></div>
-<div class="relative z-10 flex flex-col h-full justify-between gap-6">
-<div class="flex justify-between items-start">
-<div class="flex items-center gap-2 text-primary font-code-mono text-code font-code">
-<span class="material-symbols-outlined text-[18px]">account_tree</span>
-<span>/models/fine-tune</span>
-</div>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">open_in_new</span>
-</a>
-</div>
-<div>
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Custom LLM via LoRA Architecture</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-xl">
-                                Designed and deployed a highly optimized parameter-efficient fine-tuning (PEFT) pipeline using Low-Rank Adaptation (LoRA). Achieved 90% reduction in training costs while maintaining parity with full-parameter fine-tuning on domain-specific reasoning tasks.
-                            </p>
-</div>
-<div class="flex flex-wrap gap-2 mt-auto">
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-code-mono text-code font-code border border-primary/20">PyTorch</span>
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-code-mono text-code font-code border border-primary/20">HuggingFace</span>
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-code-mono text-code font-code border border-primary/20">LoRA</span>
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-code-mono text-code font-code border border-primary/20">CUDA</span>
-</div>
-</div>
-</article>
-<!-- Project 2: Autonomous AI Agents -->
-<article class="glass-panel rounded-xl p-8 flex flex-col gap-6 card-hover relative overflow-hidden">
-<div class="relative z-10 flex flex-col h-full justify-between gap-6">
-<div class="flex justify-between items-start">
-<div class="flex items-center gap-2 text-secondary font-code-mono text-code font-code">
-<span class="material-symbols-outlined text-[18px]">smart_toy</span>
-<span>/agents/core</span>
-</div>
-<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">
-<span class="material-symbols-outlined">open_in_new</span>
-</a>
-</div>
-<div>
-<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Autonomous AI Agents</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Multi-agent framework capable of collaborative problem solving. Agents utilize chain-of-thought prompting and specialized tool-use to resolve complex multi-step queries autonomously.
-                            </p>
-</div>
-<div class="flex flex-wrap gap-2 mt-auto">
-<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary font-code-mono text-code font-code border border-secondary/20">LangChain</span>
-<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary font-code-mono text-code font-code border border-secondary/20">Python</span>
-<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary font-code-mono text-code font-code border border-secondary/20">Vector DB</span>
-</div>
-</div>
-</article>
-<!-- Project 3: IT Infrastructure -->
-<article class="glass-panel rounded-xl p-8 flex flex-col gap-6 card-hover relative overflow-hidden">
-<div class="relative z-10 flex flex-col h-full justify-between gap-6">
-<div class="flex justify-between items-start">
-<div class="flex items-center gap-2 text-tertiary font-code-mono text-code font-code">
-<span class="material-symbols-outlined text-[18px]">dns</span>
-<span>/infra/deploy</span>
-</div>
-<a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">
-<span class="material-symbols-outlined">open_in_new</span>
-</a>
-</div>
-<div>
-<h2 class="font-headline-md text-headline-md text-on-surface mb-3">IT Infrastructure for Int'l Services</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Architected a scalable, low-latency deployment pipeline for serving LLMs across diverse geographic regions, bridging infrastructure gaps between datacenters in Asia and Africa.
-                            </p>
-</div>
-<div class="flex flex-wrap gap-2 mt-auto">
-<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-code-mono text-code font-code border border-tertiary/20">Docker</span>
-<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-code-mono text-code font-code border border-tertiary/20">Kubernetes</span>
-<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-code-mono text-code font-code border border-tertiary/20">AWS</span>
-</div>
-</div>
-</article>
-<!-- Project 4: Data Pipeline visualization (Spans 2 cols) -->
-<article class="glass-panel rounded-xl p-0 flex flex-col md:flex-row gap-0 md:col-span-2 card-hover relative overflow-hidden">
-<div class="w-full md:w-2/5 h-48 md:h-auto bg-surface-container-high relative border-r border-white/5">
-<div class="bg-cover bg-center w-full h-full opacity-60 mix-blend-screen" data-alt="A highly abstract, futuristic 3D data visualization featuring glowing interconnected nodes and sweeping neural network pathways against a deep, dark abyss. The lighting is sophisticated and moody, with sharp neon cyan and violet highlights signifying data flow. The aesthetic is extremely high-tech, clean, and meticulously rendered to suggest advanced AI computation and global connectivity, matching a sleek modern dark-mode UI design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4k6Fv40Dt3Q86FID5M9keDRMBh58x_Hsgwqim67NGMWtcuQ-bEANm7gehuCnXJghGy0vQo9bMItTJ4hCQcT6BwzQkBFv0kB6-SLuG2H1axiDHas3Q055H961NFOS_Xw4qIB7ZWExbDeeyDD2yr4f4oRhtLGxSElRnNcdDErSSIhjdHSPBzWbSb-jonkmupn9IoryEVU6eH9HMS9q9247rVKe-r_NHemXigm916-rfF1dfKRcc4p7wRQ')"></div>
-</div>
-<div class="p-8 w-full md:w-3/5 flex flex-col h-full justify-between gap-6 relative z-10">
-<div class="flex justify-between items-start">
-<div class="flex items-center gap-2 text-primary font-code-mono text-code font-code">
-<span class="material-symbols-outlined text-[18px]">schema</span>
-<span>/data/pipeline</span>
-</div>
-</div>
-<div>
-<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Multimodal Data Ingestion Engine</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Built a robust ETL pipeline capable of processing unstructured text, audio, and visual data simultaneously for training advanced multimodal models. Features real-time anomaly detection and sanitization.
-                            </p>
-</div>
-<div class="flex flex-wrap gap-2 mt-auto">
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-code-mono text-code font-code border border-primary/20">Apache Kafka</span>
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-code-mono text-code font-code border border-primary/20">Spark</span>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- Work in Progress Section -->
-<section aria-label="Work in Progress" class="mt-stack-lg border-t border-white/10 pt-stack-md relative">
-<div class="flex items-center gap-4 mb-8">
-<span class="material-symbols-outlined text-secondary text-display-lg">science</span>
-<div>
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Work in Progress</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Active research and development at TCU</p>
-</div>
-</div>
-<div class="glass-panel rounded-xl p-8 relative overflow-hidden border border-secondary/20">
-<!-- Shimmer Loading state indicator -->
-<div class="absolute top-0 left-0 w-full h-1 animate-shimmer"></div>
-<div class="flex flex-col md:flex-row gap-8 items-start">
-<div class="flex-grow">
-<div class="flex items-center gap-2 text-secondary font-code-mono text-code font-code mb-4">
-<span class="material-symbols-outlined text-[18px] animate-pulse">sync</span>
-<span>Status: Training_Epoch_42</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Cross-Lingual Semantic Alignment</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-3xl">
-                            Investigating methodologies to map low-resource languages (specifically Shona) into the shared semantic space of large, English-centric foundational models. The goal is to improve zero-shot translation and cultural nuance retention without requiring massive parallel corpora.
-                        </p>
-<div class="flex gap-4">
-<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md ambient-glow hover:opacity-90 transition-opacity">
-                                Read Proposal
-                            </button>
-<button class="bg-transparent border border-secondary text-secondary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-secondary/10 transition-colors">
-                                View Repository
-                            </button>
-</div>
-</div>
-<div class="w-full md:w-1/3 glass-panel rounded-lg p-4 font-code-mono text-code font-code text-on-surface-variant text-sm overflow-x-auto">
-<pre><code><span class="text-tertiary">def</span> <span class="text-primary">align_embeddings</span>(
-    src_tensor, 
-    tgt_space, 
-    epochs=<span class="text-secondary">100</span>
-):
-    <span class="text-outline-variant"># Initialize mapping matrix</span>
-    W = init_orthogonal(src, tgt)
-    
-    <span class="text-tertiary">for</span> e <span class="text-tertiary">in</span> <span class="text-secondary">range</span>(epochs):
-        mapped = src_tensor @ W
-        loss = procrustes_loss(
-            mapped, tgt_space
-        )
-        loss.backward()
-        
-    <span class="text-tertiary">return</span> W</code></pre>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg bg-surface-container-low dark:bg-surface-container-low border-t border-white/5 mt-auto">
-<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter transition-all duration-300">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">
-                AI Portfolio
-            </div>
-<div class="font-body-md text-body-md text-on-surface-variant">
-                © 2024 AI Portfolio. From Zimbabwe to Taiwan.
-            </div>
-<div class="flex gap-6">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-colors" href="#">GitHub</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-colors" href="#">LinkedIn</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-colors" href="#">ResearchGate</a>
-</div>
-</div>
-</footer>
-</body></html>
-
-<!-- AI Lab - Portfolio -->
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Taiwan Life - AI Portfolio</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Config -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary-container": "#03b5d3",
-                        "on-error": "#690005",
-                        "inverse-primary": "#732ee4",
-                        "on-tertiary": "#620040",
-                        "secondary-fixed-dim": "#4cd7f6",
-                        "on-background": "#dae2fd",
-                        "primary": "#d2bbff",
-                        "inverse-on-surface": "#283044",
-                        "outline": "#958da1",
-                        "tertiary-container": "#ae397b",
-                        "tertiary": "#ffafd3",
-                        "primary-fixed-dim": "#d2bbff",
-                        "tertiary-fixed": "#ffd8e7",
-                        "outline-variant": "#4a4455",
-                        "surface-tint": "#d2bbff",
-                        "on-secondary-fixed": "#001f26",
-                        "surface-bright": "#31394d",
-                        "secondary-fixed": "#acedff",
-                        "on-primary": "#3f008e",
-                        "error": "#ffb4ab",
-                        "on-primary-fixed": "#25005a",
-                        "on-tertiary-fixed-variant": "#85145a",
-                        "on-primary-container": "#ede0ff",
-                        "on-primary-fixed-variant": "#5a00c6",
-                        "surface-container-low": "#131b2e",
-                        "on-secondary": "#003640",
-                        "surface-container-high": "#222a3d",
-                        "inverse-surface": "#dae2fd",
-                        "error-container": "#93000a",
-                        "primary-container": "#7c3aed",
-                        "surface-dim": "#0b1326",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-highest": "#2d3449",
-                        "tertiary-fixed-dim": "#ffafd3",
-                        "surface": "#0b1326",
-                        "primary-fixed": "#eaddff",
-                        "surface-container-lowest": "#060e20",
-                        "on-surface-variant": "#ccc3d8",
-                        "surface-container": "#171f33",
-                        "on-secondary-fixed-variant": "#004e5c",
-                        "secondary": "#4cd7f6",
-                        "on-secondary-container": "#00424e",
-                        "on-surface": "#dae2fd",
-                        "on-tertiary-container": "#ffdce9",
-                        "surface-variant": "#2d3449",
-                        "background": "#0b1326",
-                        "on-tertiary-fixed": "#3d0026"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "stack-lg": "80px",
-                        "margin-desktop": "64px",
-                        "stack-md": "32px",
-                        "gutter": "24px",
-                        "stack-sm": "12px",
-                        "margin-mobile": "20px",
-                        "unit": "8px",
-                        "container-max": "1280px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Montserrat"],
-                        "label-md": ["Inter"],
-                        "body-md": ["Inter"],
-                        "headline-lg": ["Montserrat"],
-                        "display-lg": ["Montserrat"],
-                        "body-lg": ["Inter"],
-                        "code": ["Inter"],
-                        "headline-md": ["Montserrat"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
-                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "code": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-background text-on-surface min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar (Shared Component) -->
-<nav class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
-<!-- Brand -->
-<a class="font-headline-md text-headline-md font-bold text-on-surface hover:opacity-80 transition-opacity" href="#">
-                AI Portfolio
+            <p class="text-body-md text-on-surface-variant">
+              From night markets to mountain communities, every experience informs how I design AI systems for diverse, global users.
+            </p>
+            <a href="#contact" class="mt-gutter inline-flex items-center gap-unit text-on-surface hover:text-primary">
+              Explore Journal
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
             </a>
-<!-- Navigation Links (Desktop) -->
-<ul class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
-<li>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Home</a>
-</li>
-<li>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">AI Lab</a>
-</li>
-<!-- ACTIVE TAB: Taiwan Life -->
-<li>
-<a class="text-primary border-b-2 border-primary pb-1" href="#">Taiwan Life</a>
-</li>
-<li>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a>
-</li>
-</ul>
-<!-- Trailing Actions -->
-<div class="flex items-center gap-stack-sm">
-<button aria-label="Toggle Dark Mode" class="text-on-surface-variant hover:text-on-surface transition-colors hover:opacity-80 active:scale-95 duration-200 p-2 rounded-full" data-icon="dark_mode">
-<span class="material-symbols-outlined">dark_mode</span>
-</button>
-</div>
-</div>
-</nav>
-<!-- Main Canvas -->
-<main class="flex-grow">
-<!-- Hero Section with Subtle Heritage Accent -->
-<section class="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-24">
-<!-- Subtle background accent representing cultural intersection -->
-<div class="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20" style="background: radial-gradient(circle at 80% 20%, rgba(174, 57, 123, 0.4) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(76, 215, 246, 0.3) 0%, transparent 50%); mix-blend-mode: screen;"></div>
-<div class="relative z-10 max-w-3xl">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-white/5 mb-stack-sm">
-<span class="material-symbols-outlined text-secondary text-sm">explore</span>
-<span class="font-label-md text-label-md text-secondary">Visual Log</span>
-</div>
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-stack-md">
-                    Life in Taiwan
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                    A visual diary bridging two worlds. From the vibrant, rhythmic heritage of Zimbabwe to the serene landscapes and high-tech academic environment of Taiwan. These moments capture the intersection of culture, study, and exploration.
-                </p>
-</div>
-</section>
-<!-- Masonry Gallery -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg">
-<div class="columns-1 sm:columns-2 lg:columns-3 gap-gutter space-y-gutter">
-<!-- Card 1: Hualien Nature -->
-<div class="break-inside-avoid bg-surface-container border border-white/5 rounded-xl overflow-hidden shadow-lg hover:border-white/20 transition-all duration-300 group">
-<div class="relative">
-<img class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A breathtaking, cinematic shot of Taroko Gorge in Hualien, Taiwan. The massive marble canyons plunge down to a bright turquoise river. The lighting is dramatic, filtering through the dense tropical canopy above, creating a moody, high-contrast SkeletonUI dark mode aesthetic. The image exudes a sense of vast nature and quiet exploration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvJTcFN9t61hFHcYszFP6ceQAURTHJh-vpFmj0oN70EfKfCew7UjPsRci0RYs5BjdoOaEqgTcHe0r4PrO3AziXCDlRbLeax0jFKeF36lhbNGUp4hVtN-z4fuwgD8K7ESZC1DKtGQ9ad4e8-XkcmQoLviZQGSB1fjeAAlOyzwXSRVv-TpYDv-LNKqFiN6aTwWN7A7IAvDNefSk46-f6GfNFuUSDhFNuLSjcMXT2fv8hb1inrcriCYzfQA" style="aspect-ratio: 3/4;"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-stack-md w-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Taroko Gorge</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span> Hualien
-                            </p>
-</div>
-</div>
-</div>
-<!-- Card 2: TCU Campus / Study (Accent Card) -->
-<div class="break-inside-avoid bg-surface-container relative rounded-xl overflow-hidden shadow-lg p-1 group">
-<!-- Subtle African-inspired pattern border gradient -->
-<div class="absolute inset-0 bg-gradient-to-br from-tertiary-container via-surface-container to-secondary-container opacity-50"></div>
-<div class="relative bg-surface p-stack-md rounded-lg h-full border border-white/5">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-stack-sm border border-primary/30 text-primary">
-<span class="material-symbols-outlined">menu_book</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">TCU Campus</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">
-                            Late nights debugging neural networks in the AI Lab. The quiet hum of servers and the gentle mountain breeze outside the window form the rhythm of research.
-                        </p>
-<img class="w-full rounded-lg object-cover" data-alt="A sleek, modern AI research laboratory interior at night. Glowing server racks and dual-monitor workstations display complex data visualizations in deep purples and cyans (primary and secondary brand colors). The room is bathed in low, ambient lighting, emphasizing a futuristic, focused, dark-mode technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIILNWOu8fRPQRjkhpwV9Ul8Bdtf0woQYO7R7V2CqYNrNoLOWSFxoDM7y3IVjxVPdy58tdeHXgt_A3tvTGKsYkXucy6DQdfGkxuks_5W-RYMop07pagwhm_6K1QkKZYPMdZdif-ClQyZJOStRGvPC5aZ1aH-cbRaiWdWWua4kKRbJPABTLJtC2-GWHv6K3umJg4ery2jWEOcZrGKyzjAnE84EiGec2LvIS8lws8Ge9mBSUFB0ccQorgQ" style="aspect-ratio: 16/9;"/>
-</div>
-</div>
-<!-- Card 3: Taipei Cityscape -->
-<div class="break-inside-avoid bg-surface-container border border-white/5 rounded-xl overflow-hidden shadow-lg hover:border-white/20 transition-all duration-300 group">
-<div class="relative">
-<img class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, cyberpunk-inspired wide angle shot of Taipei 101 looming over the dense city streets at dusk. Neon lights reflect off wet pavement. The color palette emphasizes deep blacks, cool blues, and striking magenta accents, fitting perfectly into a modern, sophisticated dark UI design scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1YfbUn7eLxDiHt56a5fQCL4XFAzTK0Lu1jd0n0j6ep94o37TbJ--VM3EVAMxiwzLgvIiyxs8Loil5Tq0-3eEvWNaIWxctqpYx9F_LgkDsrQHftAoTa023_24bSK5SMKmB2Vxbl9fQaHi6X6PKin9UgtnYWER0tVfIDz5qA3NtzSKApnkycXi9yH9jpk1PQ99ugjdmlO49siRRTDrgM7k_6rtn21TcvbgsxLcC6236ljWkeiUhzjdqkQ" style="aspect-ratio: 4/3;"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
-<div class="absolute bottom-0 left-0 p-stack-md w-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Urban Density</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">location_on</span> Taipei City
-                            </p>
-</div>
-</div>
-</div>
-<!-- Card 4: Cultural Blend -->
-<div class="break-inside-avoid bg-surface-container border border-white/5 rounded-xl overflow-hidden shadow-lg p-stack-md group hover:bg-surface-container-high transition-colors">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Bridging Heritage</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">
-                        Finding echoes of home in unexpected places. The warmth of the community here shares a familiar spirit with the concept of Ubuntu.
-                    </p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-tertiary-container/20 text-tertiary font-label-md text-label-md rounded-full border border-tertiary/20">Culture</span>
-<span class="px-3 py-1 bg-secondary-container/20 text-secondary font-label-md text-label-md rounded-full border border-secondary/20">Community</span>
-</div>
-</div>
-<!-- Card 5: Night Market -->
-<div class="break-inside-avoid bg-surface-container border border-white/5 rounded-xl overflow-hidden shadow-lg hover:border-white/20 transition-all duration-300 group">
-<div class="relative">
-<img class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, highly detailed photograph of vibrant Taiwanese night market street food. Plumes of steam rise against a pitch-black background, illuminated by harsh, colorful neon lights from nearby stalls. The visual style is rich, textural, and cinematic, designed to pop off a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPrDpnolQt858I3bLtP9Do-mTkvr_nHXFSfJzZBOaTdHFLFsGFj-YyQ24Le4_P5f2B3nlwO1OPChHohgEd1JFAZk7c3YuyZeWofaRbr1gkiclE4DJq-1xQ8KYiU4WhRakp8-w4ERM4ZavEFqTw21WRJ9FLOJshQSWvPEYQYB0EpKPI4uFtI3gCjFQ7LLU23Cnbdkv7BULwlgSf2bJwXpCh75IYoXPIa5Mh-GSqgzFu79la2AAGCleH1w" style="aspect-ratio: 1/1;"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-stack-md w-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Night Markets</h3>
-<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">restaurant</span> Culinary Exploration
-                            </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer (Shared Component) -->
-<footer class="w-full py-stack-lg border-t border-white/5 bg-surface-container-low dark:bg-surface-container-low">
-<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
-<!-- Copyright -->
-<div class="font-body-md text-body-md text-on-surface-variant">
-                © 2024 AI Portfolio. From Zimbabwe to Taiwan.
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-surface-container-low py-stack-lg">
+        <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
+          <div class="glass-panel rounded-2xl p-6 md:p-8">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-secondary">Let’s connect</p>
+                <h2 class="mt-2 font-headline text-headline-lg text-on-surface">Open to AI, research, and cross-cultural collaboration.</h2>
+              </div>
+              <a href="mailto:hello@aiporfolio.dev" class="inline-flex items-center justify-center rounded-lg bg-primary px-gutter py-[12px] text-label-md font-label-md text-on-primary">hello@aiporfolio.dev</a>
             </div>
-<!-- Links -->
-<ul class="flex items-center gap-gutter font-body-md text-body-md">
-<li>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary transition-all duration-300" href="#">GitHub</a>
-</li>
-<li>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary transition-all duration-300" href="#">LinkedIn</a>
-</li>
-<li>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary transition-all duration-300" href="#">ResearchGate</a>
-</li>
-</ul>
-</div>
-</footer>
-</body></html>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<!-- Taiwan Life - Lifestyle -->
-<!DOCTYPE html>
+    <footer class="border-t border-white/5 bg-surface-container-low py-stack-lg">
+      <div class="mx-auto flex max-w-container-max flex-col items-center justify-between gap-gutter px-margin-mobile md:flex-row md:px-margin-desktop">
+        <div class="text-center md:text-left">
+          <div class="font-headline text-headline-md font-bold text-on-surface">AI Portfolio</div>
+          <p class="mt-unit text-body-md text-primary">© 2024 AI Portfolio. From Zimbabwe to Taiwan.</p>
+        </div>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact &amp; About - AI Portfolio</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary-container": "#03b5d3",
-                        "on-error": "#690005",
-                        "inverse-primary": "#732ee4",
-                        "on-tertiary": "#620040",
-                        "secondary-fixed-dim": "#4cd7f6",
-                        "on-background": "#dae2fd",
-                        "primary": "#d2bbff",
-                        "inverse-on-surface": "#283044",
-                        "outline": "#958da1",
-                        "tertiary-container": "#ae397b",
-                        "tertiary": "#ffafd3",
-                        "primary-fixed-dim": "#d2bbff",
-                        "tertiary-fixed": "#ffd8e7",
-                        "outline-variant": "#4a4455",
-                        "surface-tint": "#d2bbff",
-                        "on-secondary-fixed": "#001f26",
-                        "surface-bright": "#31394d",
-                        "secondary-fixed": "#acedff",
-                        "on-primary": "#3f008e",
-                        "error": "#ffb4ab",
-                        "on-primary-fixed": "#25005a",
-                        "on-tertiary-fixed-variant": "#85145a",
-                        "on-primary-container": "#ede0ff",
-                        "on-primary-fixed-variant": "#5a00c6",
-                        "surface-container-low": "#131b2e",
-                        "on-secondary": "#003640",
-                        "surface-container-high": "#222a3d",
-                        "inverse-surface": "#dae2fd",
-                        "error-container": "#93000a",
-                        "primary-container": "#7c3aed",
-                        "surface-dim": "#0b1326",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-highest": "#2d3449",
-                        "tertiary-fixed-dim": "#ffafd3",
-                        "surface": "#0b1326",
-                        "primary-fixed": "#eaddff",
-                        "surface-container-lowest": "#060e20",
-                        "on-surface-variant": "#ccc3d8",
-                        "surface-container": "#171f33",
-                        "on-secondary-fixed-variant": "#004e5c",
-                        "secondary": "#4cd7f6",
-                        "on-secondary-container": "#00424e",
-                        "on-surface": "#dae2fd",
-                        "on-tertiary-container": "#ffdce9",
-                        "surface-variant": "#2d3449",
-                        "background": "#0b1326",
-                        "on-tertiary-fixed": "#3d0026"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "stack-lg": "80px",
-                        "margin-desktop": "64px",
-                        "stack-md": "32px",
-                        "gutter": "24px",
-                        "stack-sm": "12px",
-                        "margin-mobile": "20px",
-                        "unit": "8px",
-                        "container-max": "1280px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Montserrat"],
-                        "label-md": ["Inter"],
-                        "body-md": ["Inter"],
-                        "headline-lg": ["Montserrat"],
-                        "display-lg": ["Montserrat"],
-                        "body-lg": ["Inter"],
-                        "code": ["Inter"],
-                        "headline-md": ["Montserrat"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
-                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "code": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body {
-            background-color: theme('colors.background');
-            color: theme('colors.on-surface');
-            -webkit-font-smoothing: antialiased;
-        }
-        .ambient-glow {
-            box-shadow: 0 4px 30px rgba(210, 187, 255, 0.2);
-        }
-        .glass-panel {
-            background: rgba(19, 27, 46, 0.8);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .focus-ring:focus-within {
-            border-bottom-color: theme('colors.secondary');
-        }
-    </style>
-</head>
-<body class="min-h-screen flex flex-col font-body-md text-body-md">
-<!-- TopNavBar -->
-<nav class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">AI Portfolio</div>
-<div class="hidden md:flex items-center gap-gutter">
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Home</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">AI Lab</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Taiwan Life</a>
-<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Contact</a>
-</div>
-<button class="text-primary hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
-</button>
-</div>
-</nav>
-<!-- Main Content -->
-<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row gap-stack-lg">
-<!-- Left Side: Journey -->
-<section class="flex-1 space-y-stack-md">
-<div>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4">Let's Connect.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                    From the vibrant landscapes of Zimbabwe to the bustling tech hubs of Taiwan, my journey is driven by a passion for artificial intelligence and global collaboration.
-                </p>
-</div>
-<div class="glass-panel p-8 rounded-xl space-y-6">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="flight_takeoff">flight_takeoff</span>
-<div>
-<h3 class="font-headline-md text-headline-md">Zimbabwe</h3>
-<p class="text-on-surface-variant mt-1">The origin of the journey, fostering a deep curiosity for problem-solving.</p>
-</div>
-</div>
-<div class="border-l border-white/10 ml-4 pl-8 py-2">
-<span class="material-symbols-outlined text-outline-variant" data-icon="arrow_downward">arrow_downward</span>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="school">school</span>
-<div>
-<h3 class="font-headline-md text-headline-md">TCU, Taiwan</h3>
-<p class="text-on-surface-variant mt-1">Pursuing rigorous academic research in LLMs and AI infrastructure.</p>
-</div>
-</div>
-</div>
-<!-- Social Links -->
-<div class="flex gap-4 pt-4">
-<a class="glass-panel p-3 rounded-full hover:bg-surface-variant transition-colors flex items-center justify-center" href="#">
-<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
-</a>
-<a class="glass-panel p-3 rounded-full hover:bg-surface-variant transition-colors flex items-center justify-center" href="#">
-<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
-</a>
-<a class="glass-panel p-3 rounded-full hover:bg-surface-variant transition-colors flex items-center justify-center" href="#">
-<span class="material-symbols-outlined text-primary" data-icon="science">science</span>
-</a>
-</div>
-</section>
-<!-- Right Side: Contact Form -->
-<section class="flex-1">
-<div class="glass-panel p-8 md:p-10 rounded-xl relative overflow-hidden">
-<!-- Ambient glow element behind form -->
-<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-<h2 class="font-headline-lg text-headline-lg mb-8">Start a Collaboration</h2>
-<form class="space-y-6 relative z-10">
-<div class="group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Name</label>
-<input class="w-full bg-surface-dim border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-secondary transition-colors focus-ring" placeholder="Jane Doe" type="text"/>
-</div>
-<div class="group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Email</label>
-<input class="w-full bg-surface-dim border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-secondary transition-colors focus-ring" placeholder="jane@example.com" type="email"/>
-</div>
-<div class="group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Message</label>
-<textarea class="w-full bg-surface-dim border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-secondary transition-colors resize-none focus-ring" placeholder="Let's build something..." rows="4"></textarea>
-</div>
-<button class="mt-8 bg-primary text-on-primary font-label-md text-label-md py-4 px-8 rounded-lg w-full ambient-glow hover:opacity-90 transition-opacity flex items-center justify-center gap-2" type="button">
-                        Send Message
-                        <span class="material-symbols-outlined text-sm" data-icon="send">send</span>
-</button>
-</form>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg bg-surface-container-low dark:bg-surface-container-low border-t border-white/5">
-<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter transition-all duration-300">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">AI Portfolio</div>
-<div class="text-on-surface-variant text-sm">© 2024 AI Portfolio. From Zimbabwe to Taiwan.</div>
-<div class="flex gap-gutter font-body-md text-body-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">ResearchGate</a>
-</div>
-</div>
-</footer>
-</body></html> 
+        <nav class="flex flex-wrap items-center justify-center gap-gutter text-body-md" aria-label="Footer navigation">
+          <a class="text-on-surface-variant hover:text-primary" href="#home">GitHub</a>
+          <a class="text-on-surface-variant hover:text-primary" href="#projects">LinkedIn</a>
+          <a class="text-on-surface-variant hover:text-primary" href="#contact">ResearchGate</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

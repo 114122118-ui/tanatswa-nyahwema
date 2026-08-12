@@ -1,47 +1,83 @@
+:root {
+  --bg: #0b1326;
+  --surface: #0b1326;
+  --surface-container-low: #131b2e;
+  --on-surface: #dae2fd;
+  --on-surface-variant: #ccc3d8;
+  --primary: #d2bbff;
+  --secondary: #4cd7f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--on-surface);
+  font-family: 'Inter', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-headline {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-label-md {
+  letter-spacing: 0.05em;
+}
+
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
-.icon-filled {
-    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
 }
 
-/* Glassmorphism & Depth Utils */
 .glass-panel {
-    background: rgba(45, 52, 73, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(45, 52, 73, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 0 30px rgba(15, 23, 42, 0.25);
 }
 
-.ambient-glow {
-    box-shadow: 0 0 20px 0 rgba(210, 187, 255, 0.2);
+.mobile-menu {
+  display: none;
 }
 
-.card-hover {
-    transition: all 0.3s ease;
-}
-.card-hover:hover {
-    transform: translateY(-4px);
-    border-color: rgba(210, 187, 255, 0.3);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5), 0 0 20px 0 rgba(210, 187, 255, 0.15);
+.mobile-menu.is-open {
+  display: block;
 }
 
-/* Monospace font fallback for code elements */
-.font-code-mono {
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+@media (max-width: 767px) {
+  .text-display-lg-mobile {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .text-headline-lg {
+    font-size: clamp(1.9rem, 7vw, 2.4rem);
+  }
+
+  .text-headline-md {
+    font-size: 1.1rem;
+  }
+
+  .text-body-lg {
+    font-size: 1.03rem;
+  }
+
+  .text-body-md {
+    font-size: 0.95rem;
+  }
+
+  #home {
+    min-height: 0;
+  }
+
+  #home .min-h-\[78vh\] {
+    min-height: 68vh;
+  }
 }
 
-/* Shimmer effect */
-@keyframes shimmer {
-    0% { background-position: -1000px 0; }
-    100% { background-position: 1000px 0; }
-}
-.animate-shimmer {
-    background: linear-gradient(to right, rgba(210,187,255,0.1) 4%, rgba(76,215,246,0.2) 25%, rgba(210,187,255,0.1) 36%);
-    background-size: 1000px 100%;
-    animation: shimmer 3s infinite linear;
-}
-
-/* Small utilities kept from original inline styles */
-.ambient-glow { box-shadow: 0 0 20px rgba(210, 187, 255, 0.2); }
-.glass-panel { background: rgba(45, 52, 73, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
