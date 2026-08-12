@@ -43,15 +43,56 @@ body {
   box-shadow: 0 0 30px rgba(15, 23, 42, 0.25);
 }
 
+.editable-highlight {
+  outline: 1px dashed rgba(255, 255, 255, 0.65);
+  outline-offset: 6px;
+}
+
+body.editing .editable-highlight {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
 .mobile-menu {
   display: none;
+}
+
+#contactButton {
+  display: inline-flex;
 }
 
 .mobile-menu.is-open {
   display: block;
 }
 
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none !important;
+  }
+
+  #mobileMenu {
+    display: none !important;
+  }
+
+  #home {
+    min-height: 82vh;
+  }
+
+  #projects .glass-panel,
+  #life .glass-panel,
+  #contact .glass-panel {
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+  }
+}
+
 @media (max-width: 767px) {
+  .nav-toggle {
+    display: flex !important;
+  }
+
+  .mobile-menu.is-open {
+    display: block;
+  }
+
   .text-display-lg-mobile {
     font-size: clamp(2.5rem, 12vw, 3.5rem);
   }

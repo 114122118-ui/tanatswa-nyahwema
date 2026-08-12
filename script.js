@@ -3,6 +3,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const themeToggle = document.getElementById('themeToggle');
+  const editToggle = document.getElementById('editToggle');
+  const saveButton = document.getElementById('saveButton');
+  const editableElements = document.querySelectorAll('[data-editable="true"]');
+  const STORAGE_KEY = 'portfolioEdits';
+  let editMode = false;
+
+  function loadSavedEdits() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return;
+    try {
+      const edits = JSON.parse(saved);
+      editableElements.forEach((el) => {
+        const key = el.dataset.editKey;
+        if (key && edits[key] !== undefined) {
+          el.innerHTML = edits[key];
+        }
+      });
+    } catch (error) {
+      console.warn('Could not load saved edits:', error);
+    }
+  }
+
+  function saveEdits() {
+    const edits = {};
+    editableElements.forEach((el) => {
+      const key = el.dataset.editKey;
+      if (key) {
+        edits[key] = el.innerHTML;
+      }
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+    if (saveButton) {
+      saveButton.textContent = 'Saved';
+      setTimeout(() => {
+        saveButton.textContent = 'Save edits';
+      }, 1500);
+    }
+  }
+
+  loadSavedEdits();
 
   if (navToggle && mobileMenu) {
     navToggle.addEventListener('click', () => {
@@ -27,6 +67,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const isDark = root.classList.contains('dark');
       themeToggle.innerHTML = `<span class="material-symbols-outlined text-2xl">${isDark ? 'dark_mode' : 'light_mode'}</span>`;
     });
+  }
+
+  if (editToggle) {
+    editToggle.addEventListener('click', () => {
+      editMode = !editMode;
+      document.body.classList.toggle('editing', editMode);
+      editableElements.forEach((el) => {
+        el.contentEditable = String(editMode);
+        el.classList.toggle('editable-highlight', editMode);
+      });
+      if (saveButton) {
+        saveButton.classList.toggle('hidden', !editMode);
+      }
+      editToggle.setAttribute('aria-label', editMode ? 'Disable edit mode' : 'Enable edit mode');
+      editToggle.innerHTML = `<span class="material-symbols-outlined text-2xl">${editMode ? 'done' : 'edit'}</span>`;
+    });
+  }
+
+  if (saveButton) {
+    saveButton.addEventListener('click', saveEdits);
   }
 
   if (!canvas) return;

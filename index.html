@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Portfolio</title>
+    <title>Tanatswa Stephen Nyahwema</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -56,19 +56,27 @@
   <body class="bg-background text-on-surface min-h-screen flex flex-col overflow-x-hidden font-body">
     <header class="sticky top-0 z-50 border-b border-white/10 bg-surface/80 backdrop-blur-xl">
       <div class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
-        <a href="#home" class="font-headline text-headline-md font-bold text-on-surface transition-opacity hover:opacity-80">AI Portfolio</a>
+        <a href="#home" id="brandName" data-edit-key="brandName" class="flex flex-col gap-0.5 transition-opacity hover:opacity-80" data-editable="true">
+          <span class="font-headline text-headline-md font-bold text-on-surface">Tanatswa Nyahwema</span>
+          <span class="text-sm text-on-surface-variant">AI Portfolio</span>
+        </a>
 
         <nav class="hidden items-center gap-gutter md:flex" aria-label="Main navigation">
-          <a class="border-b-2 border-primary pb-1 text-primary" href="#home">Home</a>
-          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="#projects">AI Lab</a>
-          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="#life">Taiwan Life</a>
-          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="#contact">Contact</a>
+          <a class="border-b-2 border-primary pb-1 text-primary" href="index.html">Home</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="index.html#projects">AI Lab</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="index.html#life">Taiwan Life</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="contact.html">Contact</a>
         </nav>
 
         <div class="flex items-center gap-2">
+          <a id="contactButton" href="contact.html" data-edit-key="headerContactLabel" class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 md:inline-flex" data-editable="true">Contact</a>
           <button id="themeToggle" class="flex h-10 w-10 items-center justify-center rounded-full text-primary transition-colors hover:bg-white/5" aria-label="Toggle theme">
             <span class="material-symbols-outlined text-2xl">dark_mode</span>
           </button>
+          <button id="editToggle" class="flex h-10 w-10 items-center justify-center rounded-full text-primary transition-colors hover:bg-white/5" aria-label="Enable edit mode">
+            <span class="material-symbols-outlined text-2xl">edit</span>
+          </button>
+          <button id="saveButton" class="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 md:inline-flex" aria-label="Save edits">Save edits</button>
           <button class="nav-toggle flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-on-surface md:hidden" aria-label="Open menu" aria-expanded="false">
             <span class="material-symbols-outlined text-2xl">menu</span>
           </button>
@@ -183,7 +191,7 @@
                 <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-secondary">Let’s connect</p>
                 <h2 class="mt-2 font-headline text-headline-lg text-on-surface">Open to AI, research, and cross-cultural collaboration.</h2>
               </div>
-              <a href="mailto:hello@aiporfolio.dev" class="inline-flex items-center justify-center rounded-lg bg-primary px-gutter py-[12px] text-label-md font-label-md text-on-primary">hello@aiporfolio.dev</a>
+              <a href="contact.html" data-edit-key="contactSectionCTA" class="inline-flex items-center justify-center rounded-lg bg-primary px-gutter py-[12px] text-label-md font-label-md text-on-primary" data-editable="true">Share my contact</a>
             </div>
           </div>
         </div>

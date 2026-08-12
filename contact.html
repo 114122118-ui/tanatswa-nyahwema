@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Tanatswa Stephen Nyahwema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..50&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#d2bbff',
+              secondary: '#4cd7f6',
+              background: '#0b1326',
+              surface: '#0b1326',
+              'surface-container-low': '#131b2e',
+              'on-surface': '#dae2fd',
+              'on-surface-variant': '#ccc3d8',
+              'on-primary': '#3f008e'
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-background text-on-surface min-h-screen font-body">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-surface/80 backdrop-blur-xl">
+      <div class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
+        <a href="index.html" class="flex flex-col gap-0.5 transition-opacity hover:opacity-80">
+          <span class="font-headline text-headline-md font-bold text-on-surface">Tanatswa Nyahwema</span>
+          <span class="text-sm text-on-surface-variant">AI Portfolio</span>
+        </a>
+        <nav class="hidden items-center gap-gutter md:flex" aria-label="Main navigation">
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="index.html">Home</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="index.html#projects">AI Lab</a>
+          <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="index.html#life">Taiwan Life</a>
+          <a class="border-b-2 border-primary pb-1 text-primary" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow py-stack-lg">
+      <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
+        <div class="glass-panel rounded-2xl p-6 md:p-8">
+          <div class="mb-stack-lg">
+            <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-secondary">Contact Info</p>
+            <h1 class="mt-4 font-headline text-headline-lg text-on-surface">Add your contact information</h1>
+            <p class="mt-4 max-w-2xl text-body-lg text-on-surface-variant">
+              Use this page to keep your email, phone, and social links in one place. Update the fields below with your own details.
+            </p>
+          </div>
+
+          <form class="grid gap-gutter">
+            <label class="grid gap-2 text-body-md">
+              <span class="font-label-md text-label-md text-on-surface-variant">Your email</span>
+              <input type="email" placeholder="hello@aiporfolio.dev" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+            </label>
+
+            <label class="grid gap-2 text-body-md">
+              <span class="font-label-md text-label-md text-on-surface-variant">Phone number</span>
+              <input type="tel" placeholder="+886 912 345 678" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+            </label>
+
+            <label class="grid gap-2 text-body-md">
+              <span class="font-label-md text-label-md text-on-surface-variant">Location</span>
+              <input type="text" placeholder="Hualien, Taiwan" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+            </label>
+
+            <label class="grid gap-2 text-body-md">
+              <span class="font-label-md text-label-md text-on-surface-variant">LinkedIn or portfolio</span>
+              <input type="url" placeholder="https://linkedin.com/in/your-name" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+            </label>
+
+            <label class="grid gap-2 text-body-md">
+              <span class="font-label-md text-label-md text-on-surface-variant">Notes</span>
+              <textarea rows="4" placeholder="Add any extra contact details or availability notes." class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"></textarea>
+            </label>
+
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <button type="button" class="rounded-lg bg-primary px-gutter py-[12px] text-label-md font-label-md text-on-primary transition-transform hover:scale-[1.02]">
+                Save contact info
+              </button>
+              <a href="index.html" class="inline-flex items-center gap-unit text-primary hover:text-on-surface">
+                Back to Home
+                <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
