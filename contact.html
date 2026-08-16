@@ -23,6 +23,29 @@
               'on-surface': '#dae2fd',
               'on-surface-variant': '#ccc3d8',
               'on-primary': '#3f008e'
+            },
+            spacing: {
+              'margin-mobile': '20px',
+              'margin-desktop': '64px',
+              'container-max': '1280px',
+              gutter: '24px',
+              unit: '8px',
+              'stack-sm': '12px',
+              'stack-md': '32px',
+              'stack-lg': '80px'
+            },
+            fontFamily: {
+              body: ['Inter', 'sans-serif'],
+              headline: ['Montserrat', 'sans-serif']
+            },
+            fontSize: {
+              'display-lg': ['64px', { lineHeight: '1.05', letterSpacing: '-0.02em', fontWeight: '800' }],
+              'display-lg-mobile': ['40px', { lineHeight: '1.1', letterSpacing: '-0.01em', fontWeight: '800' }],
+              'headline-lg': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
+              'headline-md': ['24px', { lineHeight: '1.4', fontWeight: '600' }],
+              'body-lg': ['18px', { lineHeight: '1.7', fontWeight: '400' }],
+              'body-md': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+              'label-md': ['14px', { lineHeight: '1.2', letterSpacing: '0.05em', fontWeight: '600' }]
             }
           }
         }
@@ -34,8 +57,8 @@
     <header class="sticky top-0 z-50 border-b border-white/10 bg-surface/80 backdrop-blur-xl">
       <div class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
         <a href="index.html" class="flex flex-col gap-0.5 transition-opacity hover:opacity-80">
-          <span class="font-headline text-headline-md font-bold text-on-surface">Tanatswa Nyahwema</span>
-          <span class="text-sm text-on-surface-variant">AI Portfolio</span>
+          <span class="font-headline text-headline-md font-bold text-on-surface">AI Portfolio</span>
+          <span class="text-sm text-on-surface-variant">Tanatswa Stephen Nyahwema</span>
         </a>
         <nav class="hidden items-center gap-gutter md:flex" aria-label="Main navigation">
           <a class="text-on-surface-variant transition-colors hover:text-on-surface" href="index.html">Home</a>
@@ -51,42 +74,42 @@
         <div class="glass-panel rounded-2xl p-6 md:p-8">
           <div class="mb-stack-lg">
             <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-secondary">Contact Info</p>
-            <h1 class="mt-4 font-headline text-headline-lg text-on-surface">Add your contact information</h1>
+            <h1 class="mt-4 font-headline text-headline-lg text-on-surface">Let’s connect.</h1>
             <p class="mt-4 max-w-2xl text-body-lg text-on-surface-variant">
-              Use this page to keep your email, phone, and social links in one place. Update the fields below with your own details.
+              I’m open to AI research, product collaborations, and cross-cultural innovation work that connect technology and community.
             </p>
           </div>
 
           <form class="grid gap-gutter">
             <label class="grid gap-2 text-body-md">
               <span class="font-label-md text-label-md text-on-surface-variant">Your email</span>
-              <input type="email" placeholder="hello@aiporfolio.dev" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              <input type="email" value="nyahwematanatswa82@gmail.com" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
             </label>
 
             <label class="grid gap-2 text-body-md">
               <span class="font-label-md text-label-md text-on-surface-variant">Phone number</span>
-              <input type="tel" placeholder="+886 912 345 678" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              <input type="tel" value="+886 978 984 933" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
             </label>
 
             <label class="grid gap-2 text-body-md">
               <span class="font-label-md text-label-md text-on-surface-variant">Location</span>
-              <input type="text" placeholder="Hualien, Taiwan" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              <input type="text" value="Taiwan / Zimbabwe" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
             </label>
 
             <label class="grid gap-2 text-body-md">
-              <span class="font-label-md text-label-md text-on-surface-variant">LinkedIn or portfolio</span>
-              <input type="url" placeholder="https://linkedin.com/in/your-name" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              <span class="font-label-md text-label-md text-on-surface-variant">Instagram</span>
+              <input type="text" value="@tanatswastevynyahwema" class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
             </label>
 
             <label class="grid gap-2 text-body-md">
               <span class="font-label-md text-label-md text-on-surface-variant">Notes</span>
-              <textarea rows="4" placeholder="Add any extra contact details or availability notes." class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"></textarea>
+              <textarea rows="4" placeholder="Tell me about your idea, research topic, or project." class="rounded-2xl border border-white/10 bg-surface p-4 text-on-surface outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"></textarea>
             </label>
 
             <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <button type="button" class="rounded-lg bg-primary px-gutter py-[12px] text-label-md font-label-md text-on-primary transition-transform hover:scale-[1.02]">
-                Save contact info
-              </button>
+              <a href="mailto:nyahwematanatswa82@gmail.com" class="rounded-lg bg-primary px-gutter py-[12px] text-label-md font-label-md text-on-primary transition-transform hover:scale-[1.02]">
+                Send message
+              </a>
               <a href="index.html" class="inline-flex items-center gap-unit text-primary hover:text-on-surface">
                 Back to Home
                 <span class="material-symbols-outlined text-[18px]">arrow_back</span>

@@ -18,6 +18,25 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  --bg: #f7f9ff;
+  --surface: #ffffff;
+  --surface-container-low: #eef3ff;
+  --on-surface: #172033;
+  --on-surface-variant: #58657d;
+  --primary: #7c3aed;
+  --secondary: #0ea5e9;
+}
+
+html:not(.dark) body {
+  background: var(--bg);
+  color: var(--on-surface);
+}
+
 .font-body {
   font-family: 'Inter', sans-serif;
 }
@@ -43,21 +62,8 @@ body {
   box-shadow: 0 0 30px rgba(15, 23, 42, 0.25);
 }
 
-.editable-highlight {
-  outline: 1px dashed rgba(255, 255, 255, 0.65);
-  outline-offset: 6px;
-}
-
-body.editing .editable-highlight {
-  background-color: rgba(255, 255, 255, 0.04);
-}
-
 .mobile-menu {
   display: none;
-}
-
-#contactButton {
-  display: inline-flex;
 }
 
 .mobile-menu.is-open {

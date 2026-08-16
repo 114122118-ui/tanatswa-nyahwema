@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Tanatswa Stephen Nyahwema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#d2bbff',
+              secondary: '#4cd7f6',
+              background: '#0b1326',
+              surface: '#0d1b2a',
+              text: '#e5ecff',
+              textMuted: '#b5c2dd'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body { background: #0b1326; color: #e5ecff; font-family: 'Inter', sans-serif; }
+      .glass { background: rgba(20,29,45,0.7); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(12px); }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-background text-text">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
+        <a href="/" class="font-display text-lg font-bold text-text">Tanatswa Stephen Nyahwema</a>
+        <nav class="hidden items-center gap-8 md:flex">
+          <a href="/" class="text-textMuted hover:text-text">Home</a>
+          <a href="/about" class="border-b-2 border-primary pb-1 text-primary">About</a>
+          <a href="/projects" class="text-textMuted hover:text-text">Projects</a>
+          <a href="/blog" class="text-textMuted hover:text-text">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-5 py-16 md:px-10">
+      <div class="mb-10">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-secondary">About</p>
+        <h1 class="mt-3 font-display text-4xl md:text-6xl">From Zimbabwe to Taiwan</h1>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
+        <div class="glass rounded-2xl p-6 md:p-8">
+          <p class="text-lg leading-8 text-textMuted">
+            I am Tanatswa Stephen Nyahwema, a technology-minded researcher and student bridging african roots with Taiwan’s innovation ecosystem. My path has been shaped by curiosity, resilience, and a desire to use AI to solve real-world communication and cultural challenges.
+          </p>
+          <p class="mt-6 text-lg leading-8 text-textMuted">
+            Growing up in Zimbabwe, I developed a deep interest in solving problems through logic, design, and community. Moving to Taiwan for academic growth at Tzu Chi University opened a new chapter in my life, where I explored AI, international services, and the intersection of technology with cultural understanding.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-6 md:p-8">
+          <h2 class="font-display text-2xl">Academic Focus</h2>
+          <ul class="mt-5 space-y-4 text-textMuted">
+            <li>• AI and language models</li>
+            <li>• Custom LLM fine-tuning</li>
+            <li>• LoRA and parameter-efficient learning</li>
+            <li>• Cross-cultural digital systems</li>
+            <li>• AI agents and intelligent workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="/files/cv.pdf" class="rounded-lg bg-primary px-6 py-3 font-semibold text-[#25005a]">Download CV</a>
+        <a href="mailto:nyahwematanatswa82@gmail.com" class="rounded-lg border border-primary/50 px-6 py-3 font-semibold text-primary">Email Me</a>
+      </div>
+    </main>
+
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2">
+      <div class="glass hidden w-72 rounded-2xl p-4 text-sm text-textMuted md:block">Hello! I can help with your website, AI projects, or research questions.</div>
+      <button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-[#25005a] shadow-lg">
+        <span class="material-symbols-outlined text-3xl">smart_toy</span>
+      </button>
+    </div>
+  </body>
+</html>
