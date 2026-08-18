@@ -34,7 +34,7 @@ export default function Home() {
             <div className="glass relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 p-4 shadow-2xl">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+                  src="/profile-photo.jpg"
                   alt="Tanatswa profile"
                   className="h-[480px] w-full object-cover"
                 />
