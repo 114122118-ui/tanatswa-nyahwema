@@ -16,14 +16,13 @@ export default function AIAssistant() {
     setMessages(prev => [...prev, userMessage]);
     setInput('');
 
-    // Simulate AI response
     const responses = {
       'projects': 'Tanatswa works on LoRA fine-tuning, custom LLMs, and AI agents for cross-cultural applications.',
       'location': 'Tanatswa studies at Tzu Chi University in Taiwan but is originally from Zimbabwe.',
-      'email': 'You can reach Tanatswa at nyahwematanatswa82@gmail.com',
-      'instagram': 'Follow on Instagram: @tanatswastevynyahwema',
+      'email': 'You can reach Tanatswa at nyahwematanatswa82@gmail.com.',
+      'instagram': 'Follow on Instagram: @tanatswastevynyahwema.',
       'ai': 'The research focuses on AI systems that bridge cultures and languages, especially for low-resource languages like Shona.',
-      'default': 'That\'s an interesting question! Feel free to reach out to Tanatswa directly for more details.'
+      'default': 'I’m not fully certain about that detail, but from the information available here, I can say Tanatswa is connected to Zimbabwe and Taiwan through his studies and work. If you want, I can help with other details about his projects or research.'
     };
 
     const query = input.toLowerCase();
@@ -34,6 +33,11 @@ export default function AIAssistant() {
     else if (query.includes('email') || query.includes('contact')) response = responses.email;
     else if (query.includes('instagram')) response = responses.instagram;
     else if (query.includes('ai') || query.includes('research')) response = responses.ai;
+    else if (query.includes('zimbabwe') && (query.includes('which') || query.includes('part') || query.includes('province') || query.includes('city'))) {
+      response = 'I don’t have a specific city or province listed publicly here, so I wouldn’t want to guess. I know he is from Zimbabwe and currently studying in Taiwan.';
+    } else if (query.includes('net') || query.includes('online') || query.includes('website') || query.includes('social')) {
+      response = 'I can tell you what is listed on this site, but I don’t have a verified public profile or exact online bio beyond the details shown here.';
+    }
 
     setTimeout(() => {
       setMessages(prev => [...prev, { role: 'assistant', content: response }]);
