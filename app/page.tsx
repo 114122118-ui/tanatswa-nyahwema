@@ -34,7 +34,7 @@ export default function Home() {
             <div className="glass relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10 p-4 shadow-2xl">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/profile-photo.jpg"
+                  src="/photo.jpg"
                   alt="Tanatswa profile"
                   className="h-[480px] w-full object-cover"
                 />
