@@ -6,7 +6,7 @@ export default function Home() {
           <div className="relative z-10">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-secondary">
               <span className="h-2 w-2 rounded-full bg-secondary"></span>
-              Tzu Chi University • TCU
+              Tzu Chi University • TCU  
             </div>
 
             <h1 className="font-display text-5xl leading-tight md:text-7xl">
